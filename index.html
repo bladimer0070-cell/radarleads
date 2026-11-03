@@ -1285,10 +1285,10 @@ html.menu-open{overflow:hidden}
     o.observe(host);
   }
   var heroPlace=function(W,H,t){ return {x:W*(W<700?.62:.68)+Math.sin(t*.23)*W*.03, y:H*.52+Math.cos(t*.19)*H*.04, r:Math.min(W,H)*(W<700?.36:.44)}; };
-  var startHero=function(){ lazyLiquid($('liquid'), hero, heroPlace, FS, {scale:mobile?.5:.62, fps:60, animate:true, still:6, follow:!mobile}, function(ok){ if(ok) hero.classList.add('gl'); }); };
+  var startHero=function(){ lazyLiquid($('liquid'), hero, heroPlace, FS, {scale:mobile?.5:.62, fps:120, animate:true, still:6, follow:!mobile}, function(ok){ if(ok) hero.classList.add('gl'); }); };
   if(document.readyState==='complete') setTimeout(startHero,60); else addEventListener('load',function(){ setTimeout(startHero,60); });
-  lazyLiquid($('liquidW'), $('dar'), function(){ return {x:-1e5,y:-1e5,r:1}; }, FSW, {scale:mobile?.4:.5, fps:mobile?45:40, animate:true, still:14});
-  lazyLiquid($('liquid2'), $('contact'), function(W,H,t){ return {x:W*(W<700?.7:.76)+Math.sin(t*.2)*W*.02, y:H*.5+Math.cos(t*.17)*H*.05, r:Math.min(W,H)*(W<700?.3:.38)}; }, FS, {scale:mobile?.5:.6, fps:60, animate:true, still:20});
+  lazyLiquid($('liquidW'), $('dar'), function(){ return {x:-1e5,y:-1e5,r:1}; }, FSW, {scale:mobile?.4:.5, fps:mobile?60:120, animate:true, still:14});
+  lazyLiquid($('liquid2'), $('contact'), function(W,H,t){ return {x:W*(W<700?.7:.76)+Math.sin(t*.2)*W*.02, y:H*.5+Math.cos(t*.17)*H*.05, r:Math.min(W,H)*(W<700?.3:.38)}; }, FS, {scale:mobile?.5:.6, fps:120, animate:true, still:20});
 })();
 </script>
 
