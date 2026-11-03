@@ -1204,7 +1204,8 @@ html.menu-open{overflow:hidden}
   ' return c;}',
   'void main(){',
   ' vec2 px=gl_FragCoord.xy; vec2 uv=(px-.5*uRes)/uRes.y;',
-  ' vec2 d=px-uLens; float dist=length(d)/uR; vec3 col=field(uv)*(1.-smoothstep(1.35,1.,dist)*.35);',
+  ' vec2 d=px-uLens; float dist=length(d)/uR; float ew=2.2/uR; vec3 col;',
+  ' if(dist>1.-ew) col=field(uv)*(1.-smoothstep(1.35,1.,dist)*.35);',
   ' if(dist<1.){ vec3 outc=col;',
   '  float z=sqrt(max(1.-dist*dist,0.)); vec2 lc=(uLens-.5*uRes)/uRes.y;',
   '  vec2 ruv=lc+(d/uRes.y)*mix(-.9,.5,z);',
@@ -1218,7 +1219,7 @@ html.menu-open{overflow:hidden}
   '  float ang=atan(d.y,d.x); float sw=mod(-uT*1.96-ang,6.2831853);',
   '  col+=vec3(.49,.85,.34)*exp(-sw*2.2)*.20*smoothstep(1.,.2,dist);',
   '  col*=1.-smoothstep(.97,1.,dist)*.25;',
-  '  col=mix(col,outc,smoothstep(1.-2.2/uR,1.,dist));',
+  '  if(dist>1.-ew) col=mix(col,outc,smoothstep(1.-ew,1.,dist));',
   ' }',
   ' vec2 q=px/uRes; col*=mix(.55,1.,smoothstep(0.,.35,q.y)); col*=1.-.35*length((q-.5)*vec2(1.1,.9));',
   ' col+=(h(px+fract(uT)*100.)-.5)*.012;',
@@ -1264,9 +1265,10 @@ html.menu-open{overflow:hidden}
     function size(force){ var nw=cv.clientWidth, nh=cv.clientHeight; if(!force && nw===W && Math.abs(nh-H)<200) return; W=nw; H=nh; cv.width=Math.max(1,Math.round(W*scale)); cv.height=Math.max(1,Math.round(H*scale)); gl.viewport(0,0,cv.width,cv.height); draw((performance.now()-t0)/1000+(opts.still||0)); }
     function draw(t){ var p=place(W,H,t);
       if(opts.follow){ var r=host.getBoundingClientRect(); var tx=p.x, ty=p.y; if(mx>-50 && my>r.top && my<r.bottom){ tx=p.x+(mx-p.x)*.35; ty=p.y+((my-r.top)-p.y)*.35; } if(lx===null){lx=p.x;ly=p.y;} lx+=(tx-lx)*.05; ly+=(ty-ly)*.05; p={x:lx,y:ly,r:p.r}; } gl.uniform2f(uRes,cv.width,cv.height); gl.uniform1f(uT,t); gl.uniform2f(uLens,p.x*scale,(H-p.y)*scale); gl.uniform1f(uR,p.r*scale); gl.drawArrays(gl.TRIANGLES,0,6); }
+    var acc=0, n=0, minScale=scale*.6;
     function frame(now){
-      if(!visible||document.hidden){ running=false; return; }
-      if(now-last>=minDt){ last=now; draw((now-t0)/1000+(opts.still||0)); }
+      if(!visible||document.hidden){ running=false; last=0; return; }
+      if(now-last>=minDt-2){ if(last && mobile){ acc+=now-last; n++; if(n>=40){ if(acc/n>21 && scale>minScale){ scale=Math.max(minScale,scale*.85); size(true); } acc=0; n=0; } } last=now; draw((now-t0)/1000+(opts.still||0)); }
       requestAnimationFrame(frame);
     }
     function kick(){ if(animate && !running && visible && !document.hidden){ running=true; requestAnimationFrame(frame); } }
@@ -1283,10 +1285,10 @@ html.menu-open{overflow:hidden}
     o.observe(host);
   }
   var heroPlace=function(W,H,t){ return {x:W*(W<700?.62:.68)+Math.sin(t*.23)*W*.03, y:H*.52+Math.cos(t*.19)*H*.04, r:Math.min(W,H)*(W<700?.36:.44)}; };
-  var startHero=function(){ lazyLiquid($('liquid'), hero, heroPlace, FS, {scale:mobile?.5:.62, fps:mobile?30:50, animate:true, still:6, follow:!mobile}, function(ok){ if(ok) hero.classList.add('gl'); }); };
+  var startHero=function(){ lazyLiquid($('liquid'), hero, heroPlace, FS, {scale:mobile?.5:.62, fps:60, animate:true, still:6, follow:!mobile}, function(ok){ if(ok) hero.classList.add('gl'); }); };
   if(document.readyState==='complete') setTimeout(startHero,60); else addEventListener('load',function(){ setTimeout(startHero,60); });
-  lazyLiquid($('liquidW'), $('dar'), function(){ return {x:-1e5,y:-1e5,r:1}; }, FSW, {scale:mobile?.4:.5, fps:mobile?24:40, animate:true, still:14});
-  lazyLiquid($('liquid2'), $('contact'), function(W,H,t){ return {x:W*(W<700?.7:.76)+Math.sin(t*.2)*W*.02, y:H*.5+Math.cos(t*.17)*H*.05, r:Math.min(W,H)*(W<700?.3:.38)}; }, FS, {scale:mobile?.5:.6, fps:mobile?30:45, animate:true, still:20});
+  lazyLiquid($('liquidW'), $('dar'), function(){ return {x:-1e5,y:-1e5,r:1}; }, FSW, {scale:mobile?.4:.5, fps:mobile?45:40, animate:true, still:14});
+  lazyLiquid($('liquid2'), $('contact'), function(W,H,t){ return {x:W*(W<700?.7:.76)+Math.sin(t*.2)*W*.02, y:H*.5+Math.cos(t*.17)*H*.05, r:Math.min(W,H)*(W<700?.3:.38)}; }, FS, {scale:mobile?.5:.6, fps:60, animate:true, still:20});
 })();
 </script>
 
