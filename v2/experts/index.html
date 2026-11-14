@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RADAR для экспертов — движок поиска клиентов под вашим брендом</title>
+<meta name="description" content="Ваши ученики получают инструмент, который находит им клиентов в Telegram, YouTube и Instagram. Кейс «Дар Гермеса».">
+<meta name="theme-color" content="#0F141C">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://radarleads.tech/experts/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RADAR">
+<meta property="og:url" content="https://radarleads.tech/experts/">
+<meta property="og:title" content="RADAR для экспертов — движок поиска клиентов под вашим брендом">
+<meta property="og:description" content="Ваши ученики получают инструмент, который находит им клиентов в Telegram, YouTube и Instagram. Кейс «Дар Гермеса».">
+<meta property="og:image" content="https://radarleads.tech/og-experts.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="apple-touch-icon" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=IBM+Plex+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=IBM+Plex+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"></noscript>
+<link rel="stylesheet" href="../common.css">
+<link rel="stylesheet" href="../experts.css">
+</head>
+<body>
+<div class="loader" id="loader" aria-hidden="true"><p>найдём, к<span class="acc">о</span>му продавать</p></div>
+<div class="cursor" id="cursor" aria-hidden="true"><i></i></div>
+<header class="nav" id="nav"><div class="wrap"><a class="brand" href="../" aria-label="RADAR, на главную" data-keep><img src="../img/radar-icon.webp" alt="" width="34" height="34"><b>RADAR</b></a><div class="seg" role="navigation" aria-label="Для кого"><a href="../freelance/" data-keep >Фрилансеру</a><a href="../experts/" data-keep aria-current="page">Эксперту</a></div><nav class="nav-links" aria-label="Разделы"><a href="#benefits">Выгоды</a><a href="#dar">Кейс</a><a href="#launch">Внедрение</a><a href="#faq">Вопросы</a></nav><a class="btn btn-signal" href="https://t.me/kuchkarov_producer" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.5 4.3 2.9 11.5c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.9-1.4-1.5ZM8.6 14.3l9.3-5.9c.4-.3.9-.1.5.3l-7.9 7.1-.3 3.3-1.6-4.8Z"/></svg><span>Запросить демо</span></a><button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button></div></header><div class="mnav" id="mnav" aria-hidden="true" inert><div class="seg" role="navigation" aria-label="Для кого"><a href="../freelance/" data-keep >Фрилансеру</a><a href="../experts/" data-keep aria-current="page">Эксперту</a></div><nav aria-label="Меню"><a href="#benefits">Выгоды</a><a href="#dar">Кейс</a><a href="#launch">Внедрение</a><a href="#faq">Вопросы</a></nav><a class="btn btn-signal" href="https://t.me/kuchkarov_producer" target="_blank" rel="noopener">Запросить демо</a></div>
+<style>
+.ex-hero .hero-center{place-items:center start;text-align:left;padding-left:max(24px,calc((100vw - var(--wrap))/2 + 24px));padding-right:24px}
+.ex-hero .hero-copy{align-items:flex-start;max-width:min(560px,44vw)}
+.ex-hero .h1{font-size:clamp(40px,4.9vw,76px)}
+.ex-hero .hero-cta{justify-content:flex-start}
+.ex-hero .hero-cta .cta-note{text-align:left}
+.ex-hero .hero-eyebrow{text-align:left;padding-left:max(24px,calc((100vw - var(--wrap))/2 + 24px))}
+@media (max-width:900px){
+  .ex-hero .hero-center{place-items:center;text-align:center;padding:0 16px}
+  .ex-hero .hero-copy{align-items:center;max-width:none}
+  .ex-hero .hero-cta{justify-content:center}.ex-hero .hero-cta .cta-note{text-align:center}
+  .ex-hero .hero-eyebrow{text-align:center;padding-left:16px}
+}
+</style>
+<main id="top">
+
+<!-- E1 -->
+<section class="hero ex-hero" id="hero" style="padding:0">
+  <div id="navSentinel" aria-hidden="true" style="position:absolute;left:0;top:70%;width:1px;height:1px"></div>
+  <div class="hero-fallback" aria-hidden="true"></div>
+  <canvas id="liquid" aria-hidden="true"></canvas>
+  <div class="hero-dg" aria-hidden="true"><img src="../img/dg-tg.webp" alt="" width="1600" height="900"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="hero-eyebrow"><i></i>RADAR · для экспертов и школ</div>
+  <div class="hero-center">
+    <div class="hero-copy">
+      <h1 class="h1">Движок поиска клиентов внутри в<span class="acc">а</span>шего продукта</h1>
+      <p class="hero-sub">Вы учите монтажу, продюсированию, SMM или дизайну. RADAR под вашим брендом находит ученикам клиентов в Telegram, YouTube и Instagram — и они быстрее доходят до первых продаж.</p>
+      <div class="hero-cta">
+        <a class="btn btn-signal" href="https://t.me/kuchkarov_producer" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.5 4.3 2.9 11.5c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.9-1.4-1.5ZM8.6 14.3l9.3-5.9c.4-.3.9-.1.5.3l-7.9 7.1-.3 3.3-1.6-4.8Z"/></svg>Запросить демо</a>
+        <a class="btn btn-ghost" href="#dar">Смотреть кейс</a>
+        <span class="cta-note">напишите <b>ДВИЖОК</b> в личку</span>
+      </div>
+      <span class="hero-dg-tag"><img src="../img/radar-icon.webp" alt="" width="24" height="24">«Дар Гермеса» работает на движке <b>RADAR</b></span>
+    </div>
+  </div>
+  <div class="hero-bottom"><div class="hero-plats" aria-label="Площадки"><span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 4 3 11l6 2 2 6 3-4 5 4 2-15Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Telegram</span><span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="m10 9.5 5 2.5-5 2.5v-5Z" fill="currentColor"/></svg>YouTube</span><span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>Instagram</span></div></div>
+</section>
+
+<!-- E2 -->
+<section id="pain">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Боль каждого потока</div>
+      <div>
+        <h2>«А где искать клиентов?» — <em>вопрос из каждого потока</em></h2>
+        <p>Ученик прошёл обучение и понял методику. Дальше он упирается в поиск, и результат курса зависит от того, найдёт ли он первого клиента.</p>
+      </div>
+    </div>
+    <ol class="chain">
+      <li><p>Ученик понял методику, но не знает, кому писать.</p></li>
+      <li><p>Застревает на поиске и не доходит до первой продажи.</p></li>
+      <li><p>Уходит с ощущением, что обучение не сработало.</p></li>
+      <li><p>Нет кейсов — следующий поток продаётся тяжелее.</p></li>
+    </ol>
+    <p class="chain-out rv">Методика ни при чём. <b>Не хватает одного звена: найти людей, которым это нужно.</b></p>
+  </div>
+</section>
+
+<!-- E3 -->
+<section class="band" id="benefits">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Решение</div>
+      <div>
+        <h2>RADAR как <em>движок вашего продукта</em></h2>
+        <p>Подключите RADAR в айдентике вашего бренда, и у учеников будет не только знание, но и инструмент, который находит им клиентов.</p>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="pt"><h3>УТП, которого нет у конкурентов</h3><p>Все учат продавать. Вы ещё и даёте программу, которая находит клиентов. Ученику проще выбрать вас.</p></div>
+      <div class="pt"><h3>Больше кейсов учеников</h3><p>Ученики не застревают на поиске и быстрее доходят до первых продаж. Их результаты становятся вашим социальным доказательством.</p></div>
+      <div class="pt"><h3>Под вашим брендом</h3><p>Название, цвета, фон, готовые ниши и шаблоны сообщений настраиваются под ваш продукт и вашу методику.</p></div>
+      <div class="pt"><h3>Больше не нужно объяснять, где искать</h3><p>Вместо разборов бирж, чатов и рассылок в каждом потоке ученики открывают программу и собирают базу сами.</p></div>
+    </div>
+    <p class="uniq"><b>На рынке мы не нашли продукта</b>, который сочетает поиск клиентов в трёх соцсетях, CRM и брендирование под эксперта.</p>
+  </div>
+</section>
+
+<!-- E4 -->
+<section id="student">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Глазами ученика</div>
+      <div><h2>Что получает <em>ваш ученик</em></h2></div>
+    </div>
+    <div class="student">
+      <ul class="list">
+        <li><span class="tick"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="m2.5 6.2 2.2 2.2 4.8-4.8" fill="none" stroke="#7ED957" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Три соцсети в одной программе.</b> Telegram, YouTube и Instagram.</span></li>
+        <li><span class="tick"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="m2.5 6.2 2.2 2.2 4.8-4.8" fill="none" stroke="#7ED957" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Живые люди с поводом написать.</b> Только активные каналы и аккаунты, видно, чем человек занят.</span></li>
+        <li><span class="tick"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="m2.5 6.2 2.2 2.2 4.8-4.8" fill="none" stroke="#7ED957" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Встроенная CRM.</b> Статусы от первого сообщения до сделки, шаблоны, статистика ответов.</span></li>
+        <li><span class="tick"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="m2.5 6.2 2.2 2.2 4.8-4.8" fill="none" stroke="#7ED957" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Быстрый старт под вашу нишу.</b> Сценарии под аудиторию: один клик, и поиск настроен.</span></li>
+      </ul>
+      <div class="mini">
+        <div class="lead-card">
+          <div class="row"><h4>Java-ментор</h4><span class="pill warm">тёплый</span></div>
+          <div class="meta">YouTube · 2 650 подписчиков · 33 ролика · ER 2,3%</div>
+          <div class="why"><b>Повод написать:</b> ролик набрал ~105 тыс. просмотров, в 30 раз выше среднего по каналу</div>
+          <div class="row" style="margin-top:12px"><span class="score">score 52</span><span class="score">контакт: Telegram</span></div>
+        </div>
+        <div class="funnel" aria-label="Статусы сделки"><em>новый</em><em>написал</em><em>ответил</em><em>созвон</em><em>сделка</em></div>
+        <div class="scen"><span>Я монтажёр</span><span>Я делаю превью</span><span>Я продюсер</span></div>
+      </div>
+    </div>
+    <p class="student-note">Ученики получают <b>программу под вашим брендом</b> и <b>ежемесячный созвон</b> с нашей командой. Вопросы по программе приходят к нам, а не к вам.</p>
+  </div>
+</section>
+
+<!-- E5 -->
+<section class="plaster" id="dar">
+  <div class="pl-bg" aria-hidden="true"><div class="pl-stick"><canvas id="liquidW"></canvas></div></div>
+  <img class="wreath rv" src="../img/wreath.webp" alt="" aria-hidden="true" width="534" height="508" loading="lazy" decoding="async">
+  <img class="bust rv" src="../img/hg5s.webp" alt="" aria-hidden="true" width="653" height="700" loading="lazy" decoding="async">
+  <div class="wrap">
+    <div class="dg-head rv">
+      <span class="pl-badge">Кейс внедрения</span>
+      <h2>Дар <span>Гермеса</span></h2>
+      <p>Программа поиска клиентов для монтажёров, собранная на движке RADAR под бренд эксперта. Свои название, цвета, фон, тексты интерфейса. Внутри тот же движок.</p>
+      <span class="eng"><img src="../img/radar-icon.webp" alt="" width="24" height="24" loading="lazy">работает на движке <b>RADAR</b></span>
+    </div>
+    <div class="dg-ab">
+      <div><div class="pl-label">Сад Гермеса</div><h3>Отвечает, кому и как продавать</h3><p>Закрытое сообщество для монтажёров: как продавать уверенно, как работать с рынком, как поднять чек.</p></div>
+      <div class="now"><div class="pl-label">Дар Гермеса</div><h3>Сразу находит клиентов</h3><p>Продукт стал цельным: от знаний о продажах до программы, которая находит, кому продавать. Ученик открывает «Дар», собирает клиентов в Telegram, YouTube и Instagram и сразу применяет то, чему научился в «Саду».</p></div>
+    </div>
+    <div class="cmp-wrap">
+      <div class="cmp-top">
+        <div><h3>Один движок, два бренда</h3><p>Потяните ползунок: слева «Дар Гермеса», справа RADAR.</p></div>
+        <div class="tabs" role="tablist" aria-label="Экран">
+          <button role="tab" aria-selected="true" data-a="../img/dg-tg.webp" data-b="../img/rd-tg.webp">Telegram</button>
+          <button role="tab" aria-selected="false" data-a="../img/dg-yt.webp" data-b="../img/rd-yt.webp">YouTube</button>
+        </div>
+      </div>
+      <div class="cmp" id="cmp">
+        <img class="bot" id="cmpB" loading="lazy" decoding="async" src="../img/rd-tg.webp" alt="Интерфейс RADAR" width="1600" height="900">
+        <img class="top" id="cmpA" loading="lazy" decoding="async" src="../img/dg-tg.webp" alt="Интерфейс «Дар Гермеса» на движке RADAR" width="1600" height="900">
+        <span class="tagl">Дар Гермеса</span><span class="tagr">RADAR</span>
+        <div class="handle-line"></div>
+        <div class="knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6 3 12l6 6M15 6l6 6-6 6"/></svg></div>
+        <input type="range" min="0" max="100" value="50" id="cmpR" aria-label="Сравнить интерфейсы">
+      </div>
+    </div>
+    <div class="brandlist">
+      <div><b>Айдентика бренда</b><span>Логотип, название, палитра и фон в стиле эксперта: гипс, античность, золото.</span></div>
+      <div><b>Язык продукта</b><span>Тексты интерфейса говорят голосом бренда: «Гермес готов в путь» вместо «Готов к поиску».</span></div>
+      <div><b>Сценарии под аудиторию</b><span>Быстрый старт «Я монтажёр», «Я делаю превью», «Я продюсер» и отдельный режим «Монтажёры из чатов».</span></div>
+    </div>
+    <p class="dg-link">«Дар Гермеса» продаётся отдельно и ведёт учеников дальше по продуктовой линейке эксперта. <a href="https://hermesgarden.ru/" target="_blank" rel="noopener">Как он упакован на сайте эксперта →</a></p>
+  </div>
+</section>
+
+<!-- E6 -->
+<section id="formats">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Форматы</div>
+      <div><h2>Два способа <em>подключить RADAR</em></h2></div>
+    </div>
+    <div class="grid2 formats">
+      <div class="pt"><div class="label">Формат 1</div><h3>Встроить в обучение</h3><p>RADAR входит в ваш курс или сообщество под вашим брендом. Ученики получают его вместе с обучением.</p></div>
+      <div class="pt hl"><div class="label">Формат 2</div><h3>Свой продукт на движке RADAR</h3><p>Отдельный инструмент под вашим названием, который вы продаёте своей аудитории: отдельно, в связке с обучением, как апсейл или по подписке.</p><span class="tag">Так работает «Дар Гермеса»</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- E7 -->
+<section class="band" id="team">
+  <div class="wrap">
+    <div class="team">
+      <h3>Команда RADAR заходит вместе с программой</h3>
+      <ul>
+        <li><span class="tick"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="m2.5 6.2 2.2 2.2 4.8-4.8" fill="none" stroke="#7ED957" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Ежемесячная поддержка программы</b>Обновления, исправления и ответы на вопросы учеников по RADAR. Эти вопросы приходят к нам, а не к вам.</span></li>
+        <li><span class="tick"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="m2.5 6.2 2.2 2.2 4.8-4.8" fill="none" stroke="#7ED957" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Созвон с вашей аудиторией раз в месяц</b>Показываем, как работать с RADAR эффективнее, и разбираем ситуации учеников.</span></li>
+        <li><span class="tick"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="m2.5 6.2 2.2 2.2 4.8-4.8" fill="none" stroke="#7ED957" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Установка в один клик</b>Для учеников на Windows и macOS.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- E8 -->
+<section id="launch">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Внедрение</div>
+      <div><h2>Как проходит <em>внедрение</em></h2><p>От демо до запуска для учеников — до двух недель.</p></div>
+    </div>
+    <ol class="path path5" aria-label="Шаги внедрения">
+      <li><h3>Демо</h3><p>Показываем, как RADAR находит клиентов именно вашей аудитории.</p></li>
+      <li><h3>Бриф</h3><p>Бренд, ниши, тексты, сценарии под вашу методику.</p></li>
+      <li><h3>Сборка</h3><p>Собираем программу в вашей айдентике и с вашими сценариями.</p></li>
+      <li><h3>Запуск для учеников</h3><p>Установка в один клик на Windows и macOS.</p></li>
+      <li class="goal"><h3>Поддержка и обновления</h3><p>Обновления, исправления и ежемесячный созвон с аудиторией.</p></li>
+    </ol>
+    <div class="launch-total"><b>До 2 недель</b><span>от демо до запуска для учеников</span></div>
+  </div>
+</section>
+
+<!-- E9 -->
+<section class="band" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="label">Вопросы</div>
+      <div><h2>Частые <em>вопросы</em></h2></div>
+    </div>
+    <div class="faq">
+      <details><summary>Не заблокируют ли аккаунты учеников?<i></i></summary><div class="ans"><p>RADAR не делает массовых рассылок: сообщения ученик отправляет сам, как человек. Безопасный режим лимитов останавливает программу заранее, до паузы от Telegram. Советуем заводить для RADAR отдельный аккаунт.</p></div></details>
+      <details><summary>Где хранятся данные?<i></i></summary><div class="ans"><p>На компьютере каждого ученика, без облака. Выгрузка в Excel и CSV, по желанию синхронизация с Google Таблицей.</p></div></details>
+      <details><summary>На чём работает?<i></i></summary><div class="ans"><p>На Windows и macOS, установка в один клик.</p></div></details>
+      <details><summary>Что с обновлениями?<i></i></summary><div class="ans"><p>Обновления и исправления входят в ежемесячную поддержку.</p></div></details>
+      <details><summary>Кто отвечает на вопросы учеников?<i></i></summary><div class="ans"><p>Мы. Вопросы по программе приходят к команде RADAR, а не к вам. Раз в месяц проводим созвон с вашей аудиторией.</p></div></details>
+      <details><summary>Для каких ниш подходит?<i></i></summary><div class="ans"><p>Лучше всего — для продуктов, чьи ученики продают услуги в контенте: монтаж, превью, продюсирование, SMM, дизайн.</p></div></details>
+      <details><summary>Сколько стоит?<i></i></summary><div class="ans"><p>Зависит от формата и объёма брендирования. Точную сумму назовём после демо.</p></div></details>
+      <details><summary>Можно сначала посмотреть?<i></i></summary><div class="ans"><p>Да. На демо покажем, как RADAR находит клиентов именно вашей аудитории. Напишите «ДВИЖОК» в личку.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- E10 -->
+<section class="final2" id="contact">
+  <canvas id="liquid2" aria-hidden="true"></canvas>
+  <div class="shade" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="label">Запросить демо</div>
+    <h2>Расскажите, чему вы учите. <b>Покажем, как RADAR найдёт клиентов вашим ученикам</b></h2>
+    <div class="row">
+      <a class="btn btn-signal" href="https://t.me/kuchkarov_producer" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.5 4.3 2.9 11.5c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.9-1.4-1.5ZM8.6 14.3l9.3-5.9c.4-.3.9-.1.5.3l-7.9 7.1-.3 3.3-1.6-4.8Z"/></svg>@kuchkarov_producer</a>
+      <a class="btn btn-ghost" href="https://t.me/gupolovv" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.5 4.3 2.9 11.5c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.9-1.4-1.5ZM8.6 14.3l9.3-5.9c.4-.3.9-.1.5.3l-7.9 7.1-.3 3.3-1.6-4.8Z"/></svg>@gupolovv</a>
+      <span class="cta-note">напишите <b>ДВИЖОК</b></span>
+    </div>
+    <p class="switch">Вы фрилансер? <a href="../freelance/" data-keep>RADAR для себя →</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap"><div><b>RADAR</b>Программа для поиска клиентов в Telegram, YouTube и Instagram. Windows и macOS.</div><div><b>Для кого</b><a href="../freelance/" data-keep>Фрилансеру</a><br><a href="../experts/" data-keep>Эксперту</a></div><div><b>Канал</b><a href="https://t.me/radartelega" target="_blank" rel="noopener">t.me/radartelega</a><br><a href="https://t.me/radarreview" target="_blank" rel="noopener">Отзывы</a></div><div><b>Связаться</b><a href="https://t.me/kuchkarov_producer" target="_blank" rel="noopener">@kuchkarov_producer</a><br><a href="https://t.me/gupolovv" target="_blank" rel="noopener">@gupolovv</a></div></div></footer>
+<script src="../liquid.js"></script>
+<script src="../site.js"></script>
+<script>
+(function(){
+  var hero=document.getElementById('hero');
+  var heroPlace=function(W,H,t){ var m=W<900; return {x:W*(m?.6:.72)+Math.sin(t*.23)*W*.03, y:H*(m?.42:.5)+Math.cos(t*.19)*H*.04, r:Math.min(W,H)*(m?.34:.4)}; };
+  RL.afterLoad(function(){ RL.lazyLiquid(document.getElementById('liquid'), hero, heroPlace, RL.FS, {scale:RL.mobile?.5:.62, fps:120, animate:true, still:6, follow:!RL.mobile}, function(ok){ if(ok) hero.classList.add('gl'); }); });
+  RL.lazyLiquid(document.getElementById('liquidW'), document.getElementById('dar'), function(){ return {x:-1e5,y:-1e5,r:1}; }, RL.FSW, {scale:RL.mobile?.4:.5, fps:RL.mobile?60:120, animate:true, still:14});
+  RL.lazyLiquid(document.getElementById('liquid2'), document.getElementById('contact'), function(W,H,t){ return {x:W*(W<700?.7:.76)+Math.sin(t*.2)*W*.02, y:H*.5+Math.cos(t*.17)*H*.05, r:Math.min(W,H)*(W<700?.3:.38)}; }, RL.FS, {scale:RL.mobile?.5:.6, fps:120, animate:true, still:20});
+})();
+
+</script>
+</body>
+</html>
